@@ -16,7 +16,7 @@ Here is a js wrapper allowing a simplified use of your Rest API server hosted by
 */
 var wng = new wngApi(
   'api-eu.whyno.group',    // Endpoint of API WNG (List of available endpoints) 
-  // -> http://api.whyno.group/?documentation&endpointList
+                           // -> http://api.whyno.group/?documentation&endpointList
   'xxxxxxxxxx'             // Consumer Key
 );
 
