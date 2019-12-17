@@ -162,7 +162,7 @@ class wngApi {
   */
   callApi() {
     var res = $.ajax({
-      data: this.#input,
+      data: JSON.stringify(this.#input),
       async: false,
       headers: {
           'cache-control'  : 'no-cache',
@@ -173,8 +173,11 @@ class wngApi {
       processData: false,
       url: "https://" + this.#en + this.#path,
       method: this.#method,
-      success: function (res) {
-        return res;
+      success: function (o) {
+        return o;
+      },
+      error: function(o) {
+        return o;
       }
     });
     this.out                 = res.responseJSON;
