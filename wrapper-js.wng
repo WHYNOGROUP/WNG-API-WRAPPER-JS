@@ -161,8 +161,14 @@ class wngApi {
   * @return array
   */
   callApi() {
+  
+    if(this.#input == null)
+      var data = null;
+    else
+      var data = JSON.stringify(this.#input);
+
     var res = $.ajax({
-      data: JSON.stringify(this.#input),
+      data: data,
       async: false,
       headers: {
           'cache-control'  : 'no-cache',
